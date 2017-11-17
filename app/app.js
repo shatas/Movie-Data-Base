@@ -1,14 +1,16 @@
 'use strict';
 
-// Declare app level module which depends on views, and components
-angular.module('myApp', [
-  'ngRoute',
-  'myApp.view1',
-  'myApp.view2',
-  'myApp.version'
-]).
-config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
-  $locationProvider.hashPrefix('!');
-
-  $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
+angular.module("movieDB",[
+    'ngRoute',
+    'movieDB.catalog',
+    'movieDB.movie',
+    'movieDB.genre',
+    'movieDB.paginate-filter',
+    'movieDB.movie-service'
+]).config(function ($routeProvider){
+    $routeProvider.
+    when('/', {templateUrl: 'catalog/catalog.html', controller: 'catalogCtrl'}).
+    when('/movie/:id', {templateUrl: 'movie/movie.html', controller: 'movieCtrl'}).
+    when('/genre/:genreName', {templateUrl: 'catalog/catalog.html', controller: 'genreCtrl'}).
+    otherwise({redirectTo: '/'});
+});

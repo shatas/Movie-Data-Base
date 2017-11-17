@@ -1,25 +1,68 @@
-/* app css stylesheet */
+@import url("//fonts.googleapis.com/css?family=Lobster");
 
-.menu {
-  list-style: none;
-  border-bottom: 0.1em solid black;
-  margin-bottom: 2em;
-  padding: 0 0 0.5em;
+.body {
+    margin-bottom: 50px;
 }
 
-.menu:before {
-  content: "[";
+.section-title, .navbar-brand {
+    font-family: 'Lobester', cursive;
+    font-weight: bold;
+    line-height: 1.1;
+    font-size: 26px;
+    margin-top: 0px;
 }
 
-.menu:after {
-  content: "]";
+.movie-container {
+    position: relative;
+    height: 250px;
 }
 
-.menu > li {
-  display: inline;
+.movie-thumb {
+    text-align: center;
+    color: black;
 }
 
-.menu > li + li:before {
-  content: "|";
-  padding-right: 0.3em;
+.movie-thumb h5 {
+    font-weight: bold;
+    margin-top: 0px;
+}
+
+.movie-thumb:hover {
+    text-decoration: none;
+    color: grey;
+}
+
+.thumbnail {
+    margin-bottom: 10px;
+    max-height: 200px;
+}
+
+.pagination {
+	float: right;
+	margin-right: 20px;
+}
+
+.moviedetails .poster {
+    float: left;
+    margin-right: 20px;
+}
+
+.moviedetails .movie-title {
+    font-family: 'Lobster', cursive;
+    font-size: 35px;
+    margin-top: 0px;
+}
+
+.moviedetails .btn-info {
+    font-size: 17px;
+    margin: 15px 5% 15px 0px;
+}
+
+.moviedetails .return-link {
+    float: right;
+}
+
+.genre-title {
+    text-align: right;
+    margin-bottom: 5px;
 }
